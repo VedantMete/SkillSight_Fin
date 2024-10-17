@@ -121,9 +121,11 @@ p {
 
 /* Average class styling */
 .avg {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 600;
-  color: #007bff;
+  color: #409211;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Media Queries for responsiveness */

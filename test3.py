@@ -26,7 +26,7 @@ from flask import send_from_directory
 import math
 from pydub import AudioSegment
 import re
-#import fitz 
+import fitz 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 

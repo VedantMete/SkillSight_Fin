@@ -10,21 +10,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <style>
         #downloadButton {
-            position: fixed; /* Changed to fixed for better placement on scroll */
-            bottom: 10px; /* Changed to bottom for better visibility */
-            right: 10px;
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 24px; /* Increased padding for better aesthetics */
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
-        }
+                position: fixed; /* Keeps the button fixed even when scrolling */
+                bottom: 10px; /* 10px from the bottom */
+                left: 50%; /* 50% from the left side of the screen */
+                transform: translateX(-50%); /* Move it back by 50% of its width to center it horizontally */
+                background-color: #4CAF50;
+                color: white;
+                padding: 12px 24px; /* Increased padding for better aesthetics */
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+            }
 
         #downloadButton:hover {
             background-color: #45a049;
-            transform: scale(1.05); /* Slightly enlarge button on hover */
+            transform: translateX(-50%) scale(1.05); /* Slightly enlarge button on hover while keeping it centered */
         }
     </style>
 </head>
@@ -39,7 +40,7 @@
         </div>
     </div>
     <div class="avg" id="averageScoreContainer">
-        avg score: <span id="averageScore"></span>
+         Score: <span id="averageScore"></span>
     </div>
     <div class="section" id="section1">
         <div id="chart_div">

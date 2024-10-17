@@ -172,7 +172,7 @@ fetch('video_results')
         doc.text(`Similarity: ${(parseFloat(rowData[3]) * 100).toFixed(2)}%`, 10, yPosition + 30);
       });
 
-      doc.text(`Average Similarity Score: ${averageSimilarityScore.toFixed(2)}`, 10, 250);
+      doc.text(`Score: ${averageSimilarityScore.toFixed(2)}`, 10, 250);
 
       doc.text('Suggestions for Improvement:', 10, 260);
       data[0].forEach((rowData, index) => {

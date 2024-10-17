@@ -8,3 +8,4 @@ librosa
 soundfile
 SpeechRecognition
 pydub
+PyMuPdf
