@@ -1,0 +1,152 @@
+/* Navbar styles */
+.navbar {
+  position: sticky;
+  top: 10px; /* Adjust the gap as needed */
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #f0f0f0, #dcdcdc);
+  padding: 15px 30px;
+  transition: top 0.3s, background 0.3s;
+  width: calc(100% - 60px); /* Adjust the width to account for padding */
+  left: 30px; /* Adjust the left position to align with the edge */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #dcdcdc, #f0f0f0);
+}
+
+.links {
+  display: flex;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  margin-right: 20px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s;
+}
+
+.logo img:hover {
+  transform: rotate(10deg);
+}
+
+/* Section styles */
+.section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Chart styles */
+#chart_div {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+#myTable {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+  transition: background-color 0.3s;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td:hover {
+  background-color: #f9f9f9;
+}
+
+/* Doughnut chart styles */
+canvas#myChart {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Typography */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Average class styling */
+.avg {
+  font-size: 20px;
+  font-weight: 600;
+  color: #007bff;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav-link {
+    margin: 10px 0;
+  }
+
+  #chart_div, #myTable {
+    width: 100%;
+  }
+
+  canvas#myChart {
+    max-width: 100%;
+  }
+}

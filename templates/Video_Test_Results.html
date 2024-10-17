@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Results</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Video_Test_Results.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='loogo.png') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        #downloadButton {
+            position: fixed; /* Changed to fixed for better placement on scroll */
+            bottom: 10px; /* Changed to bottom for better visibility */
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px; /* Increased padding for better aesthetics */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+        }
+
+        #downloadButton:hover {
+            background-color: #45a049;
+            transform: scale(1.05); /* Slightly enlarge button on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="links">
+            <a class="nav-link" href="{{ url_for('home') }}">QUIT</a>
+        </div>
+        <div class="rectangle"></div>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='loogo.png') }}" alt="Logo">
+        </div>
+    </div>
+    <div class="avg" id="averageScoreContainer">
+        avg score: <span id="averageScore"></span>
+    </div>
+    <div class="section" id="section1">
+        <div id="chart_div">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div id="myTable" class="container"></div>
+        <div id="suggestionsTable" class="container"></div>
+    </div>
+    <button id="downloadButton">Download Report</button>
+    <script type="text/javascript" src="{{ url_for('static', filename='script/Video_Test_Results.js') }}"></script>
+    <script>
+</body>      
+</html>
